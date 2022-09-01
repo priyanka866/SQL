@@ -80,3 +80,11 @@ inner join COUNTRY co
 on ct.COUNTRYCODE = co.CODE
 WHERE co.CONTINENT = 'Asia';
 
+#Top Earners
+
+select concat(max(months*salary)," ",count(*))
+from Employee
+group by (months*salary)
+order by (months*salary) desc limit 1;
+
+
