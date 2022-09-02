@@ -87,4 +87,15 @@ from Employee
 group by (months*salary)
 order by (months*salary) desc limit 1;
 
+##The Blunder
+select ceil (avg(salary)-avg(replace(salary, '0',''))) 
+from EMPLOYEES ;
 
+###Weather Observation Station 2
+
+select round(sum(LAT_N),2),round(sum(LONG_W),2) from STATION;
+
+##Weather Observation Station 13
+
+select truncate(sum(LAT_N),4) from station where LAT_N
+ between 38.7880 and 137.2345;
