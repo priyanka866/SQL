@@ -99,3 +99,26 @@ select round(sum(LAT_N),2),round(sum(LONG_W),2) from STATION;
 
 select truncate(sum(LAT_N),4) from station where LAT_N
  between 38.7880 and 137.2345;
+
+###Weather Observation Station 14
+
+select truncate(max(LAT_N),4)
+from STATION
+where LAT_N < 137.2345 ;
+
+###Weather Observation Station 15
+
+select round(LONG_W,4)
+from STATION
+where LAT_N < 137.2345 
+order by LAT_N desc limit 1;
+
+##Weather Observation Station 16
+
+SELECT ROUND(MIN(LAT_N),4) FROM STATION WHERE LAT_N >38.7780
+
+##Weather Observation Station 17
+
+SELECT ROUND(LONG_W, 4) FROM station 
+WHERE LAT_N > 38.7780 
+ORDER BY lat_n ASC limit 1;
