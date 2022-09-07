@@ -9,4 +9,8 @@ select e.name as Employee from Employee p
 left join Employee e on p.id= e.managerID
 where e.salary> p.salary;
 
+##182. Duplicate Emails
+select email from Person 
+group by 1
+having count(email)>1;
 
