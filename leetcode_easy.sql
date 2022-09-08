@@ -8,9 +8,26 @@ left join Address a on p.personID=a.personID;
 select e.name as Employee from Employee p 
 left join Employee e on p.id= e.managerID
 where e.salary> p.salary;
+-- self join
+select e.name as Employee from Employee p, Employee e 
+where p.id= e.managerID
+and e.salary> p.salary;
 
 ##182. Duplicate Emails
 select email from Person 
 group by 1
 having count(email)>1;
+
+#183. Customers Who Never Order
+select name as Customers from Customers c
+left join Orders o on c.id= o.customerId
+where o.customerId is null;
+
+select customers.name as 'Customers'
+from customers
+where customers.id not in
+(
+    select customerid from orders
+);
+
 
