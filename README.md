@@ -1,3 +1,4 @@
 # SQL
-SQL quries practice from leetcode and Hackerank
-Day to day practice queries from various sources
+1) SQL quries practice from leetcode and Hackerank
+
+2) Day to day practice queries from various sources
