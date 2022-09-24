@@ -33,10 +33,15 @@ where customers.id not in
 ###196. Delete Duplicate Emails
 
 delete from Person 
-where id in(select id from (
+where id in (select id from (
 select id, Distinct email from Person group by 1)as a);
 
 DELETE p1 FROM Person p1,
     Person p2
 WHERE
-    p1.Email = p2.Email AND p1.Id > p2.Id
+    p1.Email = p2.Email AND p1.Id > p2.Id;
+    
+###
+
+
+    
